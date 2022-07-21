@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  background: rgb(250, 250, 250);
+  color: rgb(20, 20, 20);
+}
+
+h1.vulnerable {
+  color: rgb(173, 107, 0);
+}
+
+.grille {
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+  color: #00F;
+  margin-bottom: 15px;
+  display: block;
+}
+
+a:hover {
+  color: #77F;
+}
+
+span {
+  word-break: break-all;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1080px) {
+  .desktop {
+    display: block;
+  }
+}

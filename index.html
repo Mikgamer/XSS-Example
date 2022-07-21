@@ -1,0 +1,23 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple d'attaque XSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Exemple d'attaque XSS</h1>
+  <p>
+    Pour cet exemple d'attaque XSS (Cross-Site Scripting), <br class="desktop">
+    les liens sont censés faire passer du texte en information (pour les liens normaux, c'est "bonjour l'été"), <br class="desktop">
+    les liens qui tentent une attaque XSS chercher à faire passer du code malicieux (ici, il remplace le lien retour et le titre)
+  </p>
+  <div class="grille">
+    <a href="./xss-proof.html?bonjour l'été<img src=x onerror='document.querySelector(`a`).href=`./xss-evil.html`;document.querySelector(`h1`).innerText=`Page non vulnérable`;document.querySelector(`h1`).className=``;document.querySelector(`img`).outerHTML=``;'>">Page vulnérable : Attaque XSS à partir de ce lien</a>
+    <a href="./xss-proof.html?bonjour l'été">Page non vulnérable : Lien normal</a>
+    <a href="./xss.html?bonjour l'été<img src=x onerror='document.querySelector(`a`).href=`./xss-evil.html`;document.querySelector(`h1`).innerText=`Page non vulnérable`;document.querySelector(`h1`).className=``;document.querySelector(`img`).outerHTML=``;'>">Page vulnérable : Attaque XSS à partir de ce lien</a>
+    <a href="./xss.html?bonjour l'été">Page vulnérable : Lien normal</a>
+  </div>
+</body>
+</html>
