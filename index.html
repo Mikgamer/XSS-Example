@@ -14,7 +14,7 @@
     les liens qui tentent une attaque XSS chercher à faire passer du code malicieux (ici, il remplace le lien retour et le titre)
   </p>
   <div class="grille">
-    <a href="./xss-proof.html?bonjour l'été<img src=x onerror='document.querySelector(`a`).href=`./xss-evil.html`;document.querySelector(`h1`).innerText=`Page non vulnérable`;document.querySelector(`h1`).className=``;document.querySelector(`img`).outerHTML=``;'>">Page vulnérable : Attaque XSS à partir de ce lien</a>
+    <a href="./xss-proof.html?bonjour l'été<img src=x onerror='document.querySelector(`a`).href=`./xss-evil.html`;document.querySelector(`h1`).innerText=`Page non vulnérable`;document.querySelector(`h1`).className=``;document.querySelector(`img`).outerHTML=``;'>">Page non vulnérable : Attaque XSS à partir de ce lien</a>
     <a href="./xss-proof.html?bonjour l'été">Page non vulnérable : Lien normal</a>
     <a href="./xss.html?bonjour l'été<img src=x onerror='document.querySelector(`a`).href=`./xss-evil.html`;document.querySelector(`h1`).innerText=`Page non vulnérable`;document.querySelector(`h1`).className=``;document.querySelector(`img`).outerHTML=``;'>">Page vulnérable : Attaque XSS à partir de ce lien</a>
     <a href="./xss.html?bonjour l'été">Page vulnérable : Lien normal</a>
